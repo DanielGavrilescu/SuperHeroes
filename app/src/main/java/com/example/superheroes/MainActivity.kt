@@ -15,6 +15,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
@@ -55,7 +56,7 @@ fun heroesCard(
     heroe: Heroe,
     modifier: Modifier
 ) {
-    Card(modifier = Modifier.padding(8.dp), elevation = 4.dp,)
+    Card(modifier = Modifier.padding(8.dp), elevation = 4.dp)
     {
         Row(
             modifier = Modifier
@@ -69,18 +70,28 @@ fun heroesCard(
                     text = stringResource(heroe.nombre),
                     style = MaterialTheme.typography.h3
                 )
+                Image(
+                    modifier = Modifier.size(80.dp),
+                    painter = painterResource(heroe.imagenId),
+                    contentDescription = "Imagen del heroe",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxWidth()
+
+                )
+
+            }
+            Column(modifier = Modifier) {
+                Text(
+                    text = "Super poder",
+                    style = MaterialTheme.typography.h5,
+                    )
                 Text(
                     text = stringResource(heroe.descripcion),
                     style = MaterialTheme.typography.body1
                 )
-            }
-            Image(
-                modifier= Modifier.size(80.dp),
-                painter = painterResource(heroe.imagenId),
-                contentDescription = "Imagen del heroe",
-                contentScale = ContentScale.Crop
 
-            )
+            }
+
         }
     }
 }
@@ -88,7 +99,7 @@ fun heroesCard(
 @Preview
 @Composable
 
-fun Preview (){
+fun Preview() {
     SuperHeroesTheme {
         // A surface container using the 'background' color from the theme
         Surface(
