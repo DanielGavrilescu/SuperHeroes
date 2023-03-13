@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SuperHeroes</string>
+    <string name="heroe_1">Antman</string>
+    <string name="heroe_2">Spiderman</string>
+    <string name="heroe_3">Batman</string>
+    <string name="heroe_4">Dani Boy</string>
+    <string name="heroe_5">Toni Super Teacher</string>
+    <string name="heroe_6">Dani Gacha Life</string>
+    <string name="descripcion_heroe_1">Hormiguita pelotuda</string>
+    <string name="descripcion_heroe_2">Araña Gaseosa</string>
+    <string name="descripcion_heroe_3">Bola portadora de virus</string>
+    <string name="descripcion_heroe_4">Frikazo rumano</string>
+    <string name="descripcion_heroe_5">Pantallazo Azull </string>
+    <string name="descripcion_heroe_6">Gamer de día, borracho de noche</string>
+</resources>
