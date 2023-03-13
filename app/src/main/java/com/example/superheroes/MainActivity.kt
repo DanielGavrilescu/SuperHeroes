@@ -64,30 +64,35 @@ fun heroesCard(
                 .fillMaxWidth()
         )
         {
-            Column(modifier = Modifier.weight(1f))
+            Column(modifier = Modifier)
             {
                 Text(
                     text = stringResource(heroe.nombre),
                     style = MaterialTheme.typography.h3
                 )
                 Image(
-                    modifier = Modifier.size(80.dp),
+                    modifier = Modifier
+                        .size(80.dp)
+                        .align(alignment = Alignment.CenterHorizontally),
                     painter = painterResource(heroe.imagenId),
                     contentDescription = "Imagen del heroe",
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxWidth()
-
                 )
 
+            }
+            Column(modifier = Modifier.weight(1f)) {
+                
             }
             Column(modifier = Modifier) {
                 Text(
                     text = "Super poder",
                     style = MaterialTheme.typography.h5,
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
                 Text(
                     text = stringResource(heroe.descripcion),
-                    style = MaterialTheme.typography.body1
+                    style = MaterialTheme.typography.body1,
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
 
             }
@@ -112,4 +117,3 @@ fun Preview() {
 
 }
 
-hola q haze
